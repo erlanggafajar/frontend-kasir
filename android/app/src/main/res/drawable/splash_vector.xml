@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,60 m-55,0 a55,55 0 1,1 110,0 a55,55 0 1,1 -110,0" />
+    
+    <!-- Placeholder for your logo - replace with actual path data -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M40,40 L80,40 L80,80 L40,80 Z" />
+        
+</vector>

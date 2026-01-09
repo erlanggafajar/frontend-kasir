@@ -1,0 +1,145 @@
+@baseUrl = http://localhost:8000/api
+@email = admwarung@app.test
+@password = password
+
+@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY1MzcyNzIyLCJleHAiOjE3NjUzNzYzMjIsIm5iZiI6MTc2NTM3MjcyMiwianRpIjoib01hOXUwWk1NOFczblBLMiIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.JxUaA4GaSzJn8XLJybkS2SnJoniMQP2ans6oBr3KFKQ
+
+### untuk login:
+POST {{baseUrl}}/login
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+
+{
+  "email" : "{{email}}",
+  "password" : "{{password}}"
+}
+
+### untuk mendaftar:
+POST {{baseUrl}}/pendaftaran
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+
+{
+  "nama": "admin warung",
+  "email": "admwarung@app.test",
+  "password": "password"
+}
+
+
+
+### untuk ambil list produk:
+GET {{baseUrl}}/produk
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer {{token}}
+
+
+### untuk menambah produk:
+POST {{baseUrl}}/produk
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer {{token}}
+
+{
+  "kode_barang": "kp15",
+  "nama" : "KOPI HITAM",
+  "harga" : 3000,
+  "stok" : 60
+}
+
+
+### untuk melihat produk berdasarkan ID:
+GET {{baseUrl}}/produk/3
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer {{token}}
+
+
+### untuk menampilkan daftar user:
+GET {{baseUrl}}/user
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer {{token}}
+
+
+### untuk menambah user baru(KASIR):
+POST {{baseUrl}}/user
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer {{token}}
+
+{
+  "nama": "osas",
+  "email": "osasisu@app.test",
+  "password": "password",
+  "hak_akses": "KASIR"
+}
+
+
+### untuk edit user berdasarkan ID:
+PUT {{baseUrl}}/user/3
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer {{token}}
+
+{
+  "nama": "osas222",
+  "email": "osasisu222@app.test",
+  "password": "password22",
+  "hak_akses": "ADMIN"
+}
+
+
+### untuk menghapus user berdasarkan ID:
+DELETE {{baseUrl}}/user/2
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer {{token}}
+
+
+### untuk membuat transaksi baru:
+POST {{baseUrl}}/tambah-transaksi
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer {{token}}
+
+{
+  "data" : [
+    {
+      "id_barang": 3,
+      "qty": 6
+    },
+    {
+      "id_barang": 4,
+      "qty": 4
+    }
+  ]
+}
+
+
+### untuk menampilkan daftar riwayat transaksi:
+GET {{baseUrl}}/riwayat-transaksi
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer {{token}}
+
+
+### untuk melihat detail transaksi berdasarkan ID:
+GET {{baseUrl}}/detail-transaksi/1
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer {{token}}
+
+
+### untuk export laporan transaksi ke excel:
+GET {{baseUrl}}/transaksi/export?tanggal=2025-11-14
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer {{token}}
+
+
+### untuk mencatak laporan transaksi ke format PDF:
+GET {{baseUrl}}/transaksi/download-pdf?tanggal=2025-11-14
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer {{token}}
