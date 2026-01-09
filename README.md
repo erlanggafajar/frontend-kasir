@@ -6,7 +6,8 @@ Aplikasi kasir modern dengan Flutter untuk mengelola transaksi penjualan toko de
 
 ### 🔐 **Autentikasi & Manajemen User**
 
-- Login dan registrasi pengguna dengan role-based access
+- Login pengguna dengan role-based access
+- Registrasi dengan role ADMIN
 - **ADMIN (OWNER)**: Akses penuh ke semua fitur
 - **KASIR (KARYAWAN)**: Akses terbatas sesuai toko
 - Edit profile pengguna (tanpa ubah password untuk KASIR)
@@ -18,6 +19,10 @@ Aplikasi kasir modern dengan Flutter untuk mengelola transaksi penjualan toko de
 - Kategori produk dengan kode unik
 - Monitoring stok real-time
 - Update harga dan stok bulk
+
+### 🛍️ **Manajemen User**
+
+- CRUD User KASIR khusus untuk ADMIN
 
 ### 💳 **Sistem Transaksi**
 
