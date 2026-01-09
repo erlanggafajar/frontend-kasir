@@ -21,7 +21,7 @@ Aplikasi kasir modern dengan Flutter untuk mengelola transaksi penjualan toko de
 
 ### 💳 **Sistem Transaksi**
 
-- Transaksi penjualan dengan multiple payment methods
+- Transaksi penjualan
 - Validasi stok otomatis saat checkout
 - Riwayat transaksi per toko dengan filtering
 - **KASIR**: Hanya lihat transaksi miliknya sendiri
@@ -37,7 +37,7 @@ Aplikasi kasir modern dengan Flutter untuk mengelola transaksi penjualan toko de
 
 ### 🔒 **Keamanan & Data Isolation**
 
-- Multi-toko dengan data isolation sempurna
+- Toko dengan data isolation sempurna
 - Toko-based filtering untuk semua API endpoints
 - Role-based permissions (ADMIN/KASIR)
 - Token authentication dengan JWT
